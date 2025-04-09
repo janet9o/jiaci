@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -14,10 +13,14 @@
     .hero img { width: 260px; height: 260px; object-fit: cover; border-radius: 50%; margin: 20px; }
     .hero-text { max-width: 520px; margin: 20px; align-self: flex-start; }
     .circle-links a { display: inline-block; width: 100px; height: 100px; border-radius: 50%; line-height: 100px; text-align: center; font-weight: bold; margin: 10px; text-decoration: none; color: white; }
-    .btn-resume { background: #f39c12; } .btn-projects { background: #e74c3c; } .btn-contact { background: #1abc9c; }
+    .btn-resume { background: #f39c12; } 
+    .btn-projects { background: #e74c3c; } 
+    .btn-contact { background: #1abc9c; }
     section { padding: 80px 20px; border-top: 1px solid #eee; }
     h2.section-title { font-weight: 700; font-size: 2.5rem; margin-bottom: 30px; }
-    .section-title.resume { color: #f39c12; } .section-title.highlights { color: #e74c3c; } .section-title.contact { color: #1abc9c; }
+    .section-title.resume { color: #f39c12; } 
+    .section-title.highlights { color: #e74c3c; } 
+    .section-title.contact { color: #1abc9c; }
     .highlight-group { background: #fff; border-radius: 1rem; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
     .seminar-card { background: #fff; border-radius: 1rem; box-shadow: 0 0 8px rgba(0,0,0,0.05); padding: 2rem; margin-top: 3rem; }
     .highlight-img {
@@ -27,22 +30,24 @@
       object-fit: contain;
       border-radius: 0.75rem;
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
-      cursor: pointer;}
+      cursor: pointer;
+    }
     footer { background: #f1f1f1; padding: 40px; text-align: center; }
     .social-icons a { margin: 0 10px; font-size: 24px; color: #333; }
     .modal-body img {
-  max-height: 90vh;   /* ✅ 限制最大高度為視窗高度的 90% */
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 0.5rem;
-  display: block;
-  margin: 0 auto;
-}
+      max-height: 90vh;   /* 限制最大高度為視窗高度的 90% */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Jia–Ci Wen</a>
@@ -60,6 +65,7 @@
 </nav>
 <div style="padding-top:80px;"></div>
 
+<!-- Hero Section -->
 <section class="hero">
   <img src="https://janet9o.github.io/jiaci/assets/profile.jpg" alt="Jia-Ci Wen">
   <div class="hero-text">
@@ -73,6 +79,7 @@
   </div>
 </section>
 
+<!-- Resume Section -->
 <section id="resume">
   <div class="container">
     <h2 class="section-title resume">Resume</h2>
@@ -91,6 +98,7 @@
   </div>
 </section>
 
+<!-- Highlights Section -->
 <section id="highlights">
   <div class="container">
     <h2 class="section-title highlights">Professional Highlights</h2>
@@ -111,34 +119,34 @@
     </div>
 
     <!-- Certifications -->
-<div class="highlight-group">
-  <h3 class="text-primary mb-4">Certifications</h3>
-  <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-    <div class="btn-group mb-2" role="group">
-      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('all')">全部</button>
-      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('language')">語言類</button>
-      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('tech')">技術類</button>
+    <div class="highlight-group">
+      <h3 class="text-primary mb-4">Certifications</h3>
+      <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+        <div class="btn-group mb-2" role="group">
+          <button class="btn btn-outline-primary btn-sm" onclick="filterCert('all')">全部</button>
+          <button class="btn btn-outline-primary btn-sm" onclick="filterCert('language')">語言類</button>
+          <button class="btn btn-outline-primary btn-sm" onclick="filterCert('tech')">技術類</button>
+        </div>
+        <div>
+          <select id="sortSelect" class="form-select form-select-sm w-auto" onchange="sortCerts()">
+            <option value="desc">排序方式：新到舊</option>
+            <option value="asc">排序方式：舊到新</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" id="certList">
+        <div class="col-md-6 text-center cert-card" data-date="2023-07-02" data-type="language">
+          <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
+          <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
+          <img src="https://janet9o.github.io/jiaci/assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
+        </div>
+        <div class="col-md-6 text-center cert-card" data-date="2023-06-10" data-type="language">
+          <h5 class="fw-bold">TOEIC 多益證書</h5>
+          <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分，具備優秀英文理解與溝通能力。</p>
+          <img src="https://janet9o.github.io/jiaci/assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
+        </div>
+      </div>
     </div>
-    <div>
-      <select id="sortSelect" class="form-select form-select-sm w-auto" onchange="sortCerts()">
-        <option value="desc">排序方式：新到舊</option>
-        <option value="asc">排序方式：舊到新</option>
-      </select>
-    </div>
-  </div>
-  <div class="row" id="certList">
-    <div class="col-md-6 text-center cert-card" data-date="2023-07-02" data-type="language">
-      <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
-      <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
-      <img src="https://janet9o.github.io/jiaci/assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
-    </div>
-    <div class="col-md-6 text-center cert-card" data-date="2023-06-10" data-type="language">
-      <h5 class="fw-bold">TOEIC 多益證書</h5>
-      <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分，具備優秀英文理解與溝通能力。</p>
-      <img src="https://janet9o.github.io/jiaci/assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
-    </div>
-  </div>
-</div>
 
     <!-- Seminars -->
     <div class="seminar-card">
@@ -148,6 +156,7 @@
   </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact">
   <div class="container text-center">
     <h2 class="section-title contact">Contact</h2>
@@ -155,6 +164,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 Jia-Ci Wen</p>
   <div class="social-icons">
@@ -185,6 +195,36 @@
   </div>
 </div>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function sortCerts() {
+    const order = document.getElementById('sortSelect').value;
+    const container = document.getElementById('certList');
+    const cards = Array.from(container.getElementsByClassName('cert-card'));
+    cards.sort((a, b) => {
+      const dateA = new Date(a.dataset.date);
+      const dateB = new Date(b.dataset.date);
+      return order === 'asc' ? dateA - dateB : dateB - dateA;
+    });
+    cards.forEach(card => container.appendChild(card));
+  }
+
+  function filterCert(type) {
+    const cards = document.getElementsByClassName('cert-card');
+    for (let c of cards) {
+      if (type === 'all' || c.dataset.type === type) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    }
+    sortCerts();  // 篩選後也套用目前的排序方式
+  }
+
+  window.onload = function() {
+    sortCerts(); // 頁面載入時預設執行排序
+  };
+</script>
 </body>
 </html>
