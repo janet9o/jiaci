@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jia-Ci Wen | Portfolio</title>
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <!-- AOS CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
     body {
@@ -16,12 +13,10 @@
       background: #ffffff;
       color: #333;
     }
-    /* 導覽列 */
     .navbar {
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       z-index: 999;
     }
-    /* 首頁 HERO */
     .hero {
       padding: 80px 0 40px;
       background: #f9f9f9;
@@ -66,7 +61,6 @@
     .btn-projects { background: #e74c3c; }
     .btn-contact { background: #1abc9c; }
 
-    /* 主要區塊 */
     section {
       padding: 80px 20px;
       border-top: 1px solid #eee;
@@ -76,17 +70,11 @@
       font-size: 2.5rem;
       margin-bottom: 30px;
     }
-    /* Color-coded section titles */
     .section-title.resume { color: #f39c12; }
     .section-title.highlights { color: #e74c3c; }
     .section-title.contact { color: #1abc9c; }
 
-    h4 { font-size: 1.25rem; }
-    /* 調整段落文字 */
-    p, li { font-size: 1rem; }
-
-    /* Certifications 區塊卡片 */
-    .highlight-group {
+    .highlight-group, .seminar-card {
       background: #fff;
       border-radius: 1rem;
       padding: 2rem;
@@ -95,23 +83,19 @@
     }
     .highlight-item { margin-bottom: 2rem; }
 
-    /* Seminars 獨立卡片 */
-    .seminar-card {
-      background: #fff;
-      border-radius: 1rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      padding: 2rem;
-    }
-
-    /* 證書圖片 */
     .highlight-img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 240px;
+      height: 160px;
+      object-fit: cover;
       border-radius: 0.75rem;
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
       cursor: pointer;
     }
-
-    /* Footer */
+    .modal-body img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
     footer {
       background: #f1f1f1;
       padding: 40px;
@@ -122,16 +106,10 @@
       font-size: 24px;
       color: #333;
     }
-    /* modal 圖片 */
-    .modal-body img {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
   </style>
 </head>
 <body>
 
-<!-- 導覽列 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Jia-Ci Wen</a>
@@ -149,9 +127,8 @@
 </nav>
 <div style="padding-top:80px;"></div>
 
-<!-- 首頁 -->
 <section class="hero" data-aos="fade-up">
-  <img src="assets/profile.jpg" alt="Jia-Ci Wen">
+  <img src="assets/IMG_4910.jpg" alt="Jia-Ci Wen">
   <div class="hero-text">
     <h1>Hello</h1>
     <h5>我叫 Jia-Ci Wen，目前就讀於臺北大學資訊管理研究所，專注於資料科學、人工智慧應用與內容分析。</h5>
@@ -163,102 +140,47 @@
   </div>
 </section>
 
-<!-- Resume -->
-<section id="resume" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title resume">Resume</h2>
-    <h4>Education</h4>
-    <ul>
-      <li>2024 – 臺北大學 資訊管理研究所（碩士）</li>
-      <li>2019 – 中正大學 企業管理學系（學士）</li>
-      <li>2016 – 臺中女中</li>
-    </ul>
-    <hr>
-    <h4>Skills</h4>
-    <ul>
-      <li>Python / JavaScript / HTML / CSS</li>
-      <li>自然語言處理、資料視覺化、深度學習</li>
-      <li>Git / Bootstrap / Figma</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Highlights -->
 <section id="highlights" data-aos="fade-up">
   <div class="container">
     <h2 class="section-title highlights">Professional Highlights</h2>
 
-    <!-- Projects -->
     <div class="highlight-group mb-5">
       <h3 class="text-primary mb-4">Projects</h3>
       <div class="row highlight-item align-items-center">
         <div class="col-md-6">
           <h5 class="fw-bold">情緒分析研究</h5>
-          <p class="mb-1">(研究與實作類型專案)</p>
+          <p class="mb-1">（研究與實作類型專案）</p>
           <p class="text-muted">分析短影音與即時互動文本中的觀眾情緒，並運用 NLP 模型進行情緒分類與視覺化。</p>
         </div>
         <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/500x300?text=Project" class="highlight-img" alt="project">
+          <img src="assets/project.jpg" class="highlight-img" alt="project">
         </div>
       </div>
     </div>
 
-    <!-- Certifications -->
     <div class="highlight-group mb-5">
       <h3 class="text-primary mb-4">Certifications</h3>
-      <!-- 篩選與排序工具列 -->
-      <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-        <div class="btn-group mb-2" role="group" aria-label="Filter">
-          <button type="button" class="btn btn-outline-primary btn-sm" onclick="filterCert('all')">全部</button>
-          <button type="button" class="btn btn-outline-primary btn-sm" onclick="filterCert('language')">語言類</button>
-          <button type="button" class="btn btn-outline-primary btn-sm" onclick="filterCert('tech')">技術類</button>
+      <div class="row">
+        <div class="col-md-6 mb-4 text-center">
+          <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
+          <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
+          <img src="assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
         </div>
-        <div>
-          <select id="sortSelect" class="form-select form-select-sm w-auto" onchange="sortCerts()">
-            <option value="desc">排序方式：新到舊</option>
-            <option value="asc">排序方式：舊到新</option>
-          </select>
-        </div>
-      </div>
-      <div class="row" id="certList">
-        <!-- JLPT -->
-        <div class="col-md-6 mb-4 cert-card" data-date="2023-07-02" data-type="language">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
-              <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
-            </div>
-            <div class="col-md-6 text-center">
-              <img src="assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
-            </div>
-          </div>
-        </div>
-        <!-- TOEIC -->
-        <div class="col-md-6 mb-4 cert-card" data-date="2023-06-11" data-type="language">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <h5 class="fw-bold">TOEIC 多益證書</h5>
-              <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分（Listening 450, Reading 360），具備優秀英文理解與溝通能力。</p>
-            </div>
-            <div class="col-md-6 text-center">
-              <img src="assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
-            </div>
-          </div>
+        <div class="col-md-6 mb-4 text-center">
+          <h5 class="fw-bold">TOEIC 多益證書</h5>
+          <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分（Listening 450, Reading 360），具備優秀英文理解與溝通能力。</p>
+          <img src="assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
         </div>
       </div>
     </div>
 
-
-    <!-- Seminars 獨立卡片 -->
-    <div class="seminar-card p-4">
+    <div class="seminar-card">
       <h3 class="text-primary mb-4">Seminars</h3>
       <p class="mb-0">（此處預留未來研討會發表或參與資料）</p>
     </div>
-
   </div>
 </section>
 
-<!-- Contact -->
 <section id="contact" data-aos="fade-up">
   <div class="container text-center">
     <h2 class="section-title contact">Contact</h2>
@@ -275,56 +197,31 @@
   </div>
 </footer>
 
-<!-- Modal JLPT -->
+<!-- Modals -->
 <div class="modal fade" id="jlptModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body p-0">
-        <img src="assets/jlpt.jpg" class="img-fluid" alt="JLPT Certificate Full">
+        <img src="assets/JLPT.jpg" class="img-fluid" alt="JLPT Certificate Full">
       </div>
     </div>
   </div>
 </div>
 
-<!-- Modal TOEIC -->
 <div class="modal fade" id="toeicModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body p-0">
-        <img src="assets/toeic.jpg" class="img-fluid" alt="TOEIC Certificate Full">
+        <img src="assets/TOEIC.jpg" class="img-fluid" alt="TOEIC Certificate Full">
       </div>
     </div>
   </div>
 </div>
 
-<!-- Bootstrap JS / AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
-
-  function sortCerts() {
-    const order = document.getElementById('sortSelect').value;
-    const container = document.getElementById('certList');
-    const cards = Array.from(container.getElementsByClassName('cert-card'));
-    cards.sort((a, b) => {
-      const dateA = new Date(a.dataset.date);
-      const dateB = new Date(b.dataset.date);
-      return order === 'asc' ? dateA - dateB : dateB - dateA;
-    });
-    cards.forEach(card => container.appendChild(card));
-  }
-
-  function filterCert(type) {
-    const cards = document.getElementsByClassName('cert-card');
-    for (let c of cards) {
-      if (type === 'all' || c.dataset.type === type) {
-        c.style.display = '';
-      } else {
-        c.style.display = 'none';
-      }
-    }
-  }
 </script>
 </body>
 </html>
