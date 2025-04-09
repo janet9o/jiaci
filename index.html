@@ -111,21 +111,34 @@
     </div>
 
     <!-- Certifications -->
-    <div class="highlight-group">
-      <h3 class="text-primary mb-4">Certifications</h3>
-      <div class="row">
-        <div class="col-md-6 text-center">
-          <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
-          <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
-          <img src="https://janet9o.github.io/jiaci/assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
-        </div>
-        <div class="col-md-6 text-center">
-          <h5 class="fw-bold">TOEIC 多益證書</h5>
-          <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分，具備優秀英文理解與溝通能力。</p>
-          <img src="https://janet9o.github.io/jiaci/assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
-        </div>
-      </div>
+<div class="highlight-group">
+  <h3 class="text-primary mb-4">Certifications</h3>
+  <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+    <div class="btn-group mb-2" role="group">
+      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('all')">全部</button>
+      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('language')">語言類</button>
+      <button class="btn btn-outline-primary btn-sm" onclick="filterCert('tech')">技術類</button>
     </div>
+    <div>
+      <select id="sortSelect" class="form-select form-select-sm w-auto" onchange="sortCerts()">
+        <option value="desc">排序方式：新到舊</option>
+        <option value="asc">排序方式：舊到新</option>
+      </select>
+    </div>
+  </div>
+  <div class="row" id="certList">
+    <div class="col-md-6 text-center cert-card" data-date="2023-07-02" data-type="language">
+      <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
+      <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
+      <img src="https://janet9o.github.io/jiaci/assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
+    </div>
+    <div class="col-md-6 text-center cert-card" data-date="2023-06-10" data-type="language">
+      <h5 class="fw-bold">TOEIC 多益證書</h5>
+      <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分，具備優秀英文理解與溝通能力。</p>
+      <img src="https://janet9o.github.io/jiaci/assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
+    </div>
+  </div>
+</div>
 
     <!-- Seminars -->
     <div class="seminar-card">
