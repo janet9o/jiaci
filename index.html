@@ -30,7 +30,15 @@
       cursor: pointer;}
     footer { background: #f1f1f1; padding: 40px; text-align: center; }
     .social-icons a { margin: 0 10px; font-size: 24px; color: #333; }
-    .modal-body img { width: 100%; border-radius: 0.5rem; }
+    .modal-body img {
+  max-height: 90vh;   /* ✅ 限制最大高度為視窗高度的 90% */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}
   </style>
 </head>
 <body>
