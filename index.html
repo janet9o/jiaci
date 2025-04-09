@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,113 +7,30 @@
   <title>Jia-Ci Wen | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
-    .navbar {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 999;
-    }
-    .hero {
-      padding: 80px 0 40px;
-      background: #f9f9f9;
-      display: flex;
-      align-items: start;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .hero img {
-      width: 260px;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 20px;
-    }
-    .hero-text {
-      max-width: 520px;
-      margin: 20px;
-      align-self: flex-start;
-    }
-    .hero-text h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .hero-text h5 {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    .circle-links a {
-      display: inline-block;
-      width: 100px; height: 100px;
-      border-radius: 50%;
-      line-height: 100px;
-      text-align: center;
-      font-weight: bold;
-      margin: 10px;
-      text-decoration: none;
-      color: white;
-    }
-    .btn-resume { background: #f39c12; }
-    .btn-projects { background: #e74c3c; }
-    .btn-contact { background: #1abc9c; }
-
-    section {
-      padding: 80px 20px;
-      border-top: 1px solid #eee;
-    }
-    h2.section-title {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-    .section-title.resume { color: #f39c12; }
-    .section-title.highlights { color: #e74c3c; }
-    .section-title.contact { color: #1abc9c; }
-
-    .highlight-group, .seminar-card {
-      background: #fff;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-bottom: 3rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-    .highlight-item { margin-bottom: 2rem; }
-
-    .highlight-img {
-      width: 100%;
-      max-width: 240px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 0.75rem;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-    }
-    .modal-body img {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
-    footer {
-      background: #f1f1f1;
-      padding: 40px;
-      text-align: center;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 24px;
-      color: #333;
-    }
+    body { font-family: "Segoe UI", sans-serif; background: #fff; color: #333; }
+    .navbar { box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 999; }
+    .hero { padding: 80px 0 40px; background: #f9f9f9; display: flex; flex-wrap: wrap; align-items: start; justify-content: center; }
+    .hero img { width: 260px; height: 260px; object-fit: cover; border-radius: 50%; margin: 20px; }
+    .hero-text { max-width: 520px; margin: 20px; align-self: flex-start; }
+    .circle-links a { display: inline-block; width: 100px; height: 100px; border-radius: 50%; line-height: 100px; text-align: center; font-weight: bold; margin: 10px; text-decoration: none; color: white; }
+    .btn-resume { background: #f39c12; } .btn-projects { background: #e74c3c; } .btn-contact { background: #1abc9c; }
+    section { padding: 80px 20px; border-top: 1px solid #eee; }
+    h2.section-title { font-weight: 700; font-size: 2.5rem; margin-bottom: 30px; }
+    .section-title.resume { color: #f39c12; } .section-title.highlights { color: #e74c3c; } .section-title.contact { color: #1abc9c; }
+    .highlight-group { background: #fff; border-radius: 1rem; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
+    .seminar-card { background: #fff; border-radius: 1rem; box-shadow: 0 0 8px rgba(0,0,0,0.05); padding: 2rem; margin-top: 3rem; }
+    .highlight-img { width: 100%; max-width: 300px; border-radius: 0.75rem; box-shadow: 0 0 6px rgba(0,0,0,0.1); cursor: pointer; }
+    footer { background: #f1f1f1; padding: 40px; text-align: center; }
+    .social-icons a { margin: 0 10px; font-size: 24px; color: #333; }
+    .modal-body img { width: 100%; border-radius: 0.5rem; }
   </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Jia-Ci Wen</a>
+    <a class="navbar-brand fw-bold" href="#">Jia–Ci Wen</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -127,8 +45,8 @@
 </nav>
 <div style="padding-top:80px;"></div>
 
-<section class="hero" data-aos="fade-up">
-  <img src="assets/IMG_4910.jpg" alt="Jia-Ci Wen">
+<section class="hero">
+  <img src="assets/profile.jpg" alt="Jia-Ci Wen">
   <div class="hero-text">
     <h1>Hello</h1>
     <h5>我叫 Jia-Ci Wen，目前就讀於臺北大學資訊管理研究所，專注於資料科學、人工智慧應用與內容分析。</h5>
@@ -140,40 +58,62 @@
   </div>
 </section>
 
-<section id="highlights" data-aos="fade-up">
+<section id="resume">
+  <div class="container">
+    <h2 class="section-title resume">Resume</h2>
+    <h4>Education</h4>
+    <ul>
+      <li>2024 – 臺北大學 資訊管理研究所（碩士）</li>
+      <li>2019 – 中正大學 企業管理學系（學士）</li>
+      <li>2016 – 臺中女中</li>
+    </ul>
+    <hr>
+    <h4>Skills</h4>
+    <ul>
+      <li>Python / JavaScript / HTML / CSS</li>
+      <li>自然語言處理、資料視覺化、深度學習</li>
+      <li>Git / Bootstrap / Figma</li>
+    </ul>
+  </div>
+</section>
+
+<section id="highlights">
   <div class="container">
     <h2 class="section-title highlights">Professional Highlights</h2>
 
-    <div class="highlight-group mb-5">
+    <!-- Projects -->
+    <div class="highlight-group">
       <h3 class="text-primary mb-4">Projects</h3>
-      <div class="row highlight-item align-items-center">
+      <div class="row align-items-center">
         <div class="col-md-6">
           <h5 class="fw-bold">情緒分析研究</h5>
-          <p class="mb-1">（研究與實作類型專案）</p>
+          <p class="mb-1">(研究與實作類型專案)</p>
           <p class="text-muted">分析短影音與即時互動文本中的觀眾情緒，並運用 NLP 模型進行情緒分類與視覺化。</p>
         </div>
         <div class="col-md-6 text-center">
-          <img src="assets/project.jpg" class="highlight-img" alt="project">
+          <img src="https://via.placeholder.com/500x300?text=Project" class="highlight-img" alt="Project">
         </div>
       </div>
     </div>
 
-    <div class="highlight-group mb-5">
+    <!-- Certifications -->
+    <div class="highlight-group">
       <h3 class="text-primary mb-4">Certifications</h3>
       <div class="row">
-        <div class="col-md-6 mb-4 text-center">
+        <div class="col-md-6 text-center">
           <h5 class="fw-bold">JLPT 日本語能力試驗 N3</h5>
           <p class="text-muted">2023 年通過日本語能力測驗 N3 級，總分 141/180，具備中級日語理解與應用能力。</p>
           <img src="assets/JLPT.jpg" class="highlight-img" alt="JLPT" data-bs-toggle="modal" data-bs-target="#jlptModal">
         </div>
-        <div class="col-md-6 mb-4 text-center">
+        <div class="col-md-6 text-center">
           <h5 class="fw-bold">TOEIC 多益證書</h5>
-          <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分（Listening 450, Reading 360），具備優秀英文理解與溝通能力。</p>
+          <p class="text-muted">2023 年取得 TOEIC 聽讀總分 810 分，具備優秀英文理解與溝通能力。</p>
           <img src="assets/TOEIC.jpg" class="highlight-img" alt="TOEIC" data-bs-toggle="modal" data-bs-target="#toeicModal">
         </div>
       </div>
     </div>
 
+    <!-- Seminars -->
     <div class="seminar-card">
       <h3 class="text-primary mb-4">Seminars</h3>
       <p class="mb-0">（此處預留未來研討會發表或參與資料）</p>
@@ -181,7 +121,7 @@
   </div>
 </section>
 
-<section id="contact" data-aos="fade-up">
+<section id="contact">
   <div class="container text-center">
     <h2 class="section-title contact">Contact</h2>
     <p>Email: <a href="mailto:dres983116@gmail.com">dres983116@gmail.com</a></p>
@@ -193,11 +133,10 @@
   <div class="social-icons">
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
 </footer>
 
-<!-- Modals -->
+<!-- Modal JLPT -->
 <div class="modal fade" id="jlptModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
@@ -208,6 +147,7 @@
   </div>
 </div>
 
+<!-- Modal TOEIC -->
 <div class="modal fade" id="toeicModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
@@ -219,9 +159,5 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
-</script>
 </body>
 </html>
